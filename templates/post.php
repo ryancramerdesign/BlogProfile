@@ -5,7 +5,7 @@
  *
  */
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 
 function renderNextPrevPosts($page) {
 	$date = $page->getUnformatted('date');

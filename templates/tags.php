@@ -27,7 +27,7 @@ function renderTags(PageArray $tags) {
 
 /************************************************/
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 $headline = $page->title; 
 $content = $page->body . renderTags($page->children); 
 include("./main.inc"); 

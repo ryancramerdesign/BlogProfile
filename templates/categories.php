@@ -24,7 +24,7 @@ function renderCategories(PageArray $categories, $showNumPosts = 0) {
 
 /*********************************************/
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 
 $limit = 3; // number of posts to show per category
 $headline = $page->title; 

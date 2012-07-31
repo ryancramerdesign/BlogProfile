@@ -5,7 +5,7 @@
  *
  */
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 
 /**
  * Output an RSS feed of recent comments when URL segment is 'rss'

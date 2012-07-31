@@ -111,7 +111,7 @@ function renderArchives(array $years) {
 
 /*******************************************************************/
 
-include("./blog.inc");
+include_once("./blog.inc");
 
 if($input->urlSegment1 && $input->urlSegment2) {
 	// year and month

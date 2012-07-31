@@ -5,7 +5,7 @@
  *
  */
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 
 $posts = $pages->find("template=post, categories=$page, limit=10");
 

@@ -5,5 +5,5 @@
  *
  */
 
-include("./blog.inc");
+include_once("./blog.inc");
 include("./main.inc"); 

@@ -5,7 +5,7 @@
  *
  */
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 
 $categories = $pages->get('/categories/'); 
 

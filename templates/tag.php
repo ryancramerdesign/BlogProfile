@@ -5,7 +5,7 @@
  *
  */
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 
 $posts = $pages->find("tags=$page, limit=10");
 

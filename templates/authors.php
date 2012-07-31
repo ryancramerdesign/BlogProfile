@@ -19,7 +19,7 @@ function renderAuthors(PageArray $authors) {
 		$numPosts = wire('pages')->count("template=post, created_users_id=$author, limit=2");
 		$numPostsStr = sprintf(_n('%d post', '%d posts', $author->numPosts), $author->numPosts);
 		// Note: $author->url2 is the blog-generated version, since $author->url is in the admin.
-		$out .= "<li><a href='{$author->url2}'>{$author->title}</a> <span class='num-posts'>$numPosts</span></li>";
+		$out .= "<li><a href='{$author->url2}'>" . $author->get('title|name') . "</a> <span class='num-posts'>$numPosts</span></li>";
 	}
 
 	$out .= "</ul>";
@@ -28,7 +28,7 @@ function renderAuthors(PageArray $authors) {
 
 /********************************************************/
 
-include("./blog.inc"); 
+include_once("./blog.inc"); 
 
 $authorRole = $roles->get('author');
 $superuserRole = $roles->get('superuser');
@@ -47,7 +47,7 @@ if($input->urlSegment1) {
 
 	$name = $sanitizer->pageName($input->urlSegment1);
 	$author = $users->get($name);
-	if(!$author->id || !$author->hasRole($authorRole)) throw new Wire404Exception();
+	if(!$author->id || (!$author->hasRole($authorRole) && !$author->isSuperuser())) throw new Wire404Exception();
 
 	$posts = $pages->find("template=post, created_users_id=$author, sort=-date, limit=10");
 	$authorName = $author->get('title|name'); 
