@@ -1,0 +1,562 @@
+@import url(comments.css);	/* comments styling */
+@import url(icons.css);		/* icon definitions */
+@import url(vborders.css); 	/* vertical borders (remove if you don't want vertical borders) */
+@import url(pw.css); 		/* styling of ProcessWire markup elements */
+
+/***********************************************************************
+ * Main styles for blog profile
+ *
+ */
+
+/***********************************************************************
+ * General
+ *
+ */
+
+body {
+	background: #fff; 
+}
+
+	a, a:visited {
+		color: #555; 
+		text-decoration: none; 
+	}
+		a:hover {
+			color: #000;
+		}
+
+
+	ul.links {
+	}
+		ul.links li {
+			border-bottom: 1px dotted #aaa; 
+			padding: 0.5em 0;
+			margin: 1px 0;
+		}
+
+		ul.links a {
+			display: block;
+		}
+			ul.links a.on {
+				color: #444;
+			}
+
+	h1 {
+		color: #222;
+	}
+		h2, h3, h4, h5, h6,
+		#content h2 a,
+		#content h4 a {
+			color: #222; 
+		}
+
+		h3 {
+			color: #444; 
+		}
+
+		h4 {
+			color: #555; 
+		}
+
+		h5 {
+			color: #666; 
+		}
+
+		h6 {
+			color: #777; 
+		}
+
+	blockquote {
+		border-left: 4px #ddd; 
+		border-top: 1px #ccc;
+	}
+
+
+	.num-posts {
+		background: #eee;
+		color: #777; 
+		font-size: 10px;
+		font-family: Arial; 
+		font-weight: bold;
+		text-transform: uppercase; 
+		padding: 1px 3px; 
+	}
+
+
+/***********************************************************************
+ * Masthead
+ *
+ */
+
+#masthead {
+	padding-bottom: 20px; 
+	position: relative; 
+}
+	#masthead > .wrap {
+	}
+	#masthead h1 {
+		padding-top: 15px;
+		margin: 0;
+	}
+
+	#masthead h5 {
+		margin: 0.25em 0 0 0;
+	}
+
+	#site-search-form {
+		padding-right: 10px;
+		padding-bottom: 5px;
+	}
+
+	#site-search-form input[type=search],
+	#site-search-form input[type=text] {
+		float: left; 
+		width: 100%;
+		margin: 0;
+	}
+	#site-search-form input[type=submit],
+	#site-search-form form button {
+		display: none; 
+		float: left; 
+		width: 25%; 
+		margin: 0;
+	}
+
+/***********************************************************************
+ * Content - contains nav, bodycopy and sidebar
+ *
+ */
+
+#wrap-content {
+	/* full screen width */
+	border-top: 1px solid #444;
+}
+	
+#content {
+	padding-bottom: 2em; 
+}
+
+	#bodycopy,
+	#sidebar {
+		padding-top: 23px; 
+	}
+		#sidebar {
+			padding-top: 27px;
+		}
+
+	/**
+	 * Navigation bar
+	 *
+	 */
+	#nav {
+		position: relative;
+		z-index: 5;
+		margin-top: 1px;
+	}
+		#nav form {
+			margin: 1em 0;
+		}
+		#nav a {
+			font-weight: bold; 
+		}
+
+		#nav h4 {
+			margin-bottom: -1px;
+			padding-left: 10px; 
+			border-bottom: 2px solid #444; 
+		}
+		#nav ul {
+			margin-bottom: 2em; 
+		}
+
+		#nav li {
+			padding-left: 10px; 
+			padding-right: 10px;
+			text-align: left; 
+		}
+
+			#nav li.on {
+				background: #333;
+				border: none; 
+				margin-left: 0;
+				margin-top: -1px;
+			}
+
+				#nav li + li.on {
+				}
+
+				#nav li.on a {
+					color: #fff; 
+				}
+
+				#nav li:last-child {
+					border: none; 
+				}
+
+		#topnav {
+		}
+
+	/**
+	 * Bodycopy
+	 *
+ 	 */
+
+	#bodycopy {
+	}
+		#bodycopy ul li {
+			list-style: disc; 
+			margin-left: 2em;
+		}
+
+		#bodycopy h3 {
+			font-size: 21px; 
+			line-height: 30px;
+			margin-top: 1em;
+			margin-bottom: 1em; 
+			padding: 10px 20px 5px 20px; 
+			background: #eee; 
+			color: #333; 
+			position: relative; 
+			border-top: 3px solid #444;
+		}
+
+			.archive h3 + .num-posts,
+			.category h3 + .num-posts {
+				float: right; 
+				position: relative;
+				top: -50px;
+				right: 10px;
+			}
+
+		#bodycopy h4 {
+			margin-bottom: 0.75em;
+		}
+
+		/**
+		 * Blog Posts
+		 *
+		 */
+
+		.posts {
+		}
+
+			#bodycopy h3 + .posts {
+				margin-top: -1.5em; 
+				border-top: none; 
+			}
+
+			.post {
+				margin-bottom: 1em; 
+				padding-bottom: 1em;
+			}
+				.post:last-child {
+					padding-bottom: 0;
+				}
+				.posts-small .post {
+					margin-bottom: 0; 
+				}
+				.template-post .post {
+					border-bottom: none; 
+				}
+
+				.post-head {
+				}
+					.post-head .num-comments-icon {
+						float: right; 
+						margin-top: 1em;
+						right: -5px; 
+						margin-left: 5px;
+					}
+						.posts-small .post-head .num-comments-icon {
+							margin-top: 0.5em;
+						}
+
+					.post-head h2 {
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+						#content .post-head h2 a {
+						}
+
+					#bodycopy .post-head h4 {
+						margin-bottom: 0;
+					}
+
+					.post-byline {
+						font-weight: bold;
+						margin: 7px 0 1em 0;
+						padding-top: 5px;
+					}
+
+
+			.post-body {
+				padding-left: 0;
+			}
+				#bodycopy .post-body h3 {
+					background: none; 
+					border: none; 
+					padding-top: 0;
+					padding-bottom: 0;
+					margin-bottom: 0.5em;
+					font-size: 24px; 
+				}
+				#bodycopy .post-body h5 {
+					margin-bottom: 1em;
+				}
+
+				#bodycopy .post-body iframe {
+					max-width: 100%; 
+				}
+
+			.post-foot {
+				padding-bottom: 1em;
+				border-bottom: 2px solid #444; 
+			}
+				.posts-small .post-foot {
+					padding-bottom: 0;
+				}
+
+				.post-foot p {
+					margin: 0;
+				}
+
+				.template-post .post-foot {
+					font-weight: bold;
+					border: none; 
+				}
+
+				.template-post .num-comments {
+					display: none; 
+				}
+
+				/**
+				 * Photo gallery in blog post
+				 *
+				 */
+
+				#content .post .gallery li {
+					list-style: none; 
+					float: left; 
+					margin: 5px; 
+					display: block;
+					padding: 0;
+				}
+					.post .gallery li img {
+						margin: 0;
+						display: block;
+					}
+
+			.posts-small {
+				padding-top: 1em;
+				border-top: 3px solid #444; 
+			}
+
+			#bodycopy ul.posts-group,
+			#bodycopy ul.posts-group li {
+				border: none; 
+				list-style: none;
+				margin: 0.5em 0 0 0;
+				padding: 0 0 0.25em 0;
+			}
+
+			#bodycopy ul.posts-group li {
+				position: relative; 
+				border-bottom: 1px dotted #ccc; 
+			}
+
+		/**
+		 * Other #bodycopy
+		 *
+		 */
+
+		.next-prev-posts {
+			width: 100%; 
+			margin: 1em 0;
+			position: relative; 
+		}
+
+			.next-post {
+				float: right; 
+				width: 45%; 
+				text-align: right; 
+				position: relative; 
+				left: -1em;
+			}
+			.prev-post {
+				float: left; 
+				width: 45%; 
+				margin-right: 5%; 
+				text-align: left; 
+			}
+			.next-post span,
+			.prev-post span {
+				position: absolute; 
+				top: 0;
+			}
+			.prev-post span {
+				left: -1em; 
+			}
+			.next-post span {
+				right: -1em;
+			}
+
+		.author-photo {
+			float: left;
+			margin: 0 1em 1em 0;
+		}
+		
+		#bodycopy h3 + ul {
+			margin-top: 1em;
+		}
+
+	/**
+	 * Sidebar
+	 *
+	 */
+
+	#sidebar {
+		font-size: 11px; 
+	}
+
+		.widgets {
+			margin-left: -1px; 
+		}
+			#sidebar h4 {
+				margin-bottom: 0;
+				border-bottom: 2px solid #444; 
+				padding-bottom: 5px;
+			}
+
+			.widget {
+				position: relative;
+				margin-bottom: 2em; 
+			}
+				.widget ul.links {
+					margin-bottom: 0; 
+					border: none; 
+				}
+
+				.widget ul.links + p {
+					margin-top: 0.5em;
+					margin-bottom: 0;
+				}
+
+
+/*****************************************************************
+ * Footer
+ *
+ */
+
+#wrap-footer {
+	border-top: 1px solid #444; 
+	margin-top: 12px; 
+}
+
+	#footer {
+		padding-top: 2em;
+		padding: 0.5em 0 2em 0;
+	}
+
+	#footer_note {
+		float: left; 
+	}
+
+	#processwire {
+		float: right; 
+	}
+
+/*****************************************************************
+ * Other
+ *
+ */
+
+.mobile {
+	display: none; 
+}
+
+
+/*****************************************************************
+ * Media Queries 
+ * 
+ * Adjustments to specific items per screen size
+ *
+ */
+@media only screen and (max-width: 767px) {
+	/* up to tablet portrait size */
+	#wrap-masthead #masthead {
+		padding-top: 0;
+		padding-bottom: 0.5em;
+		border: none; 
+	}
+
+	.mobile {
+		display: block;
+	}
+	.no-mobile {
+		display: none; 
+	}
+
+	#wrap-masthead #masthead {
+		padding-bottom: 0;
+	}
+
+	#wrap-masthead #masthead form {
+		margin-top: 1em; 
+	}
+
+	#wrap-masthead #masthead h1 {
+		padding-top: 0.25em;
+	}
+
+	#content #nav {
+		margin-top: 0;
+	}
+		select.nav {
+			width: 100%; 
+		}
+
+	#content,
+	#content #bodycopy,
+	#content #bodycopy h3,
+	#content #bodycopy .post,
+	#content #bodycopy .post-foot,
+	#content .MarkupPagerNav,
+	#content .comments,
+	#content .comment,
+	#content #CommentForm,
+	#content #bodycopy .CommentHeader, 
+	#content #sidebar,
+	#content #sidebar .widget,
+	#content #sidebar h4,
+	#content #sidebar .widget .links li {
+		border-left: none; 
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	#content #CommentForm {
+		padding-left: 1em;
+	}
+
+	#content #bodycopy .CommentHeader {
+		background: none; 	
+	}
+
+	#content #bodycopy h3 {
+		padding-left: 15px; 
+		margin-left: 0;
+	}
+	#processwire, 
+	#footer_note {
+		float: none; 
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 767px) {
+	#site-search {
+		position: absolute; 
+		right: 0;
+		bottom: 0;
+	}
+}

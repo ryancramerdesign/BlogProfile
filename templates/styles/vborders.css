@@ -1,0 +1,44 @@
+
+/**
+ * #bodycopy and #sidebar vertical borders
+ *
+ * These allow our horizontal borders to connect with the vertical borders
+ * If you don't want vertical borders, then comment out the vborders.css include. 
+ *
+ */
+
+#bodycopy,
+#sidebar {
+	border-left: 1px solid;
+}
+
+#bodycopy, 
+#bodycopy h3,
+.posts-small {
+	padding-left: 21px;
+	margin-left: -21px;
+}
+
+.post-foot {
+	margin-left: -22px;
+	padding-left: 22px;
+}
+
+#sidebar h4,
+.widget ul.links li {
+	padding-left: 15px; 
+	margin-left: -15px;
+}
+
+.widget {
+	padding-left: 15px;
+}
+
+#CommentForm {
+	margin-left: -21px;  
+	padding: 21px; 
+}       
+
+.MarkupPagerNav {
+	margin-left: -22px; 
+}

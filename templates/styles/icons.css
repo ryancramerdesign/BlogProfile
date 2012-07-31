@@ -1,0 +1,57 @@
+/**
+ * Icon styles for blog profile
+ *
+ */
+
+a.rss {
+	background: url(images/rss.gif) top left no-repeat; 
+	height: 14px; 
+	width: 14px;
+	overflow: hidden; 
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+#content .num-comments-icon {
+	background: #333;
+	color: #fff; 
+	display: inline-block;
+	position: relative; 
+	font-family: Arial, sans-serif;
+	font-size: 12px; 
+	line-height: 22px;
+	height: 20px;
+	width: 30px;
+	text-align: center; 
+	z-index: 1;
+	font-weight: bold;
+	margin-right: 0.5em;
+}
+	#content .num-comments-icon:before {
+		content:"";
+		position:absolute;
+		bottom:-6px;
+		left:4px;
+		width:12px;
+		height:15px;
+		background: #333;
+		z-index: -1;
+		-webkit-transform:rotate(-45deg);
+		-moz-transform:rotate(-45deg);
+		-o-transform:rotate(-45deg);
+		transform:rotate(-45deg);
+	}
+	#content .num-comments-icon:after {
+		content:"";
+		position:absolute;
+		background: #fff; 
+		height: 10px;
+		width: 11px;
+		bottom: -10px;
+		left: 0;
+	}
+
+	h4 .num-comments-icon,
+	h3 .num-comments-icon {
+		top: -2px;
+	}

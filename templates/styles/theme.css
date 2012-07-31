@@ -1,0 +1,287 @@
+/**************************************************************************
+ * Futura theme for ProcessWire Blog Profile
+ *
+ * Based on Futura admin theme by Nikola Vidoni
+ *
+ * Put together by Ryan Cramer
+ *
+ */
+
+/*************************************************************************** 
+ * Fonts 
+ *
+ */
+
+.post-foot a,
+.posts-group a,
+a.more,
+#sidebar a.more {
+	font-weight: bold; 
+}
+
+#sidebar,
+#sidebar a {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+
+#sidebar span.date {
+	font-weight: bold; 
+	font-size: 10px;
+}
+
+#sidebar a.rss {
+	position: absolute;
+	top: 12px;
+	right: 0;
+}
+
+#content h5 {
+	font-weight: bold;	
+	font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: 14px; 
+}
+
+blockquote {
+	font-family: Georgia, serif; 
+	border-left: 4px solid;
+	padding-top: 0;
+}
+
+
+/*************************************************************************** 
+ * Background colors
+ *
+ */
+
+body {
+	/* body background color */
+	background: #12282f; 
+}
+
+#wrap-masthead,
+#sidebar #site-search-form {
+	/* masthead background color */
+	background: #1f383f; 
+}
+
+#wrap-content,
+#content .num-comments-icon:after {
+	/* content background color (nav, bodycopy, sidebar) */
+	background-color: #fff; 
+}
+
+#wrap-footer {
+	/* footer background color */
+	background: #1f383f; 
+}
+
+#content .num-comments-icon,
+#content .num-comments-icon:before {
+	/* comments icon color */
+	background-color: #ff0200; 
+}
+
+.num-posts,
+#bodycopy ul.comments li.comment,
+#CommentForm,
+#sidebar span.date,
+#bodycopy h3 {
+	/* subtle background color for specific elements */
+	background: #eff5f6; 
+}
+
+
+/*************************************************************************** 
+ * Border colors (and sizes in some cases)
+ *
+ */
+
+#wrap-masthead {
+	border-top: 1px solid #000; 
+	margin-top: 7px; 
+}
+
+#wrap-masthead,
+#wrap-footer {
+	/* futura-specific lines in masthead and footer */
+	border-color: #3b4f57; 
+}
+
+#wrap-content {
+	border-top: 7px solid #000; 
+	border-color: #d0e8ec; 
+}
+
+#bodycopy,
+#sidebar, blockquote {
+	/* vertical border color, if used */
+	border-color: #d2d9dc; 
+}
+
+#bodycopy .posts-small,
+#bodycopy ul.posts-group li,
+ul.links li {
+	/* light horizontal border color */
+	border-color: #d2d9dc; 
+}
+
+.widgets h4,            
+#content, 
+#nav h4,
+#sidebar h4,
+#bodycopy h3,
+#bodycopy ul.comments li.comment,
+#bodycopy .post-foot,
+#CommentForm,
+.CommentForm_cite input,
+.CommentForm_email input,
+.CommentForm_text textarea { 
+	/* slightly darker horizontal border color than the light border color */
+	border-color: #b5c9d0; 
+}
+
+
+/*************************************************************************** 
+ * Body text colors
+ *
+ */
+
+body {
+	/* body text color */
+	color: #444; 
+}
+
+#wrap-footer {
+	/* footer text color */
+	color: #7bb1b9; 
+}
+
+#bodycopy .post-foot,
+#bodycopy .post-byline,
+#content h5 {
+	/* lighter text color to use in post byline and post footer */
+	color: #527a87; 
+}
+
+
+/*************************************************************************** 
+ * Headline text colors
+ *
+ */
+
+h1,
+h2, 
+#content h2 a,
+#content h4 a {
+	/* H2 page headline color */
+	color: #162c34; 
+}
+
+#content h3,
+#content h3 a {
+	/* H3 headline color */
+	color: #4b656d; 
+	color: #2a3f46; 
+}
+
+h4 {
+	/* H4 headline color */
+	color: #4b656d; 
+}
+
+h5 {
+	/* H5 headline color */
+	color: #4b656d; 
+}
+
+h6,
+.MarkupPagerNav li.MarkupPagerNavSeparator,
+.num-posts,
+#bodycopy h3 .num-posts,
+#sidebar span.date {
+	/* H6 headline color */
+	color: #4b656d; 
+}
+
+#masthead h1 {
+	/* H1 site headline color */
+	color: #fff; 
+}
+
+#masthead h5 {
+	/* H5 site tagline color in masthead */
+	color: #fff; 
+	opacity: 0.5;
+}
+
+
+
+/*************************************************************************** 
+ * anchor text colors: <a> tags
+ *
+ */
+
+a,
+a:visited,
+#sidebar a:hover,
+.post-byline a:hover,
+.post-foot a:hover,
+#footer a:hover,
+#bodycopy h2 a:hover {
+	/* link color */
+	color: #ff0200; 
+}
+
+a:hover {
+	/* link hover color */
+	color: #000;
+}
+
+.comments a,
+.post-byline a,
+.post-foot a,
+.MarkupPagerNav li a {
+	/* alternate link color, one that stands out a little less */
+	color: #2b5766;
+}
+
+#sidebar a {
+	/* sidebar link color */
+	/*
+	color: #2b5766;
+	color: #d10000; 
+	*/
+}
+
+
+#nav li.on,
+#nav li.on a,
+.MarkupPagerNav li.MarkupPagerNavOn a,
+.MarkupPagerNav li a:hover {
+	/** Navigation bar and pagination ON/Active state **/
+	color: #fff; 
+	background: #ff242c; 
+	/*background: #d10000; */
+}
+
+.MarkupPagerNav li a,
+.MarkupPagerNav li.MarkupPagerNavSeparator {
+	/* pagination links regular state */
+	background: #d2d9dc; 
+}
+
+#wrap-footer a {
+	/* footer link color */
+	color: #7bb1b9; 
+}
+	#wrap-footer a:hover {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+

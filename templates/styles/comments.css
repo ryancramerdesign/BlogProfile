@@ -1,0 +1,96 @@
+#comments .num-comments-icon {
+	float: left; 
+	position: relative;
+	top: 5px;
+}
+
+/**
+ * Comments Listing
+ *
+ */
+
+.CommentList {
+	font-size: 13px;
+}
+	#bodycopy ul.comments li.comment {
+		list-style: none;
+		margin: 1em 0; 
+		border-top: 3px solid #ddd; 
+		border-bottom: 1px solid #ddd; 
+		padding: 1em; 
+		padding-bottom: 1px;
+		background: #eee;
+	}
+		.comment p {
+			margin: 0 0 1em 0;
+		}
+		.comment-head,
+		#CommentForm label {
+			margin: 0.5em 0;
+			font-weight: bold; 
+		}
+		#content .comment-head {
+		}
+		#content .comment-body {
+		}
+
+	.comment-status-pending,
+	.comment-status-spam {
+		background: red;
+		color: #fff; 
+		font-size: 10px;
+		padding: 2px 5px; 
+		font-weight: bold;
+	}
+
+/**
+ * Comment Form
+ *
+ */
+
+#CommentForm { 
+	background: #eee; 
+	padding: 15px;
+	padding-bottom: 0;
+	border-top: 3px solid #ddd; 
+}
+
+	#CommentForm label {
+		display: block;
+		margin-bottom: 0.25em;
+	}
+
+	#CommentForm p {
+		margin: 0.5em 0;
+	}
+
+	.CommentForm_cite,
+	.CommentForm_email {
+		width: 49%; 
+		float: left; 
+	}
+		.CommentForm_cite {
+			padding-right: 2%; 
+		}
+		.CommentForm_cite input,
+		.CommentForm_email input,
+		.CommentForm_text textarea {
+			width: 96%; 
+			padding: 2%;
+			margin-top: 0;
+			font-size: 13px; 
+		}
+
+	.CommentForm_text {
+		clear: left; 
+	}
+		.CommentForm_text textarea {
+			height: 150px; 
+		}
+		
+
+	.CommentForm_cite input,
+	.CommentForm_email input,
+	.CommentForm_text textarea {
+		border: 1px solid #ccc; 
+	}

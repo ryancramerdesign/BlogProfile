@@ -1,0 +1,106 @@
+/**
+ * Common ProcessWire-specific output styling
+ *
+ */
+
+
+/**
+ * Styling of MarkupPagerNav module pagination
+ *
+ */
+.MarkupPagerNav {
+        clear: both;
+        margin: 1em 0 0 0;
+}
+	.MarkupPagerNav li {
+		display: inline;
+		list-style: none;
+		margin: 0;
+	}
+		.MarkupPagerNav li a,
+		.MarkupPagerNav li.MarkupPagerNavSeparator {
+			display: block;
+			float: left;
+			padding: 5px 11px;                
+			background: #ddd;
+			margin-right: 3px;
+			font-weight: bold;
+		}
+				
+		.MarkupPagerNav li.MarkupPagerNavOn a,
+		.MarkupPagerNav li a:hover {
+			text-decoration: none !important;
+			color: #fff;
+			background: #333;
+		}
+
+		.MarkupPagerNav li.MarkupPagerNavSeparator {
+			display: inline;
+			color: #777;
+			background: #fff;
+			padding-left: 3px;
+			padding-right: 3px;
+		}
+
+/**
+ * The edit link that appears when you are logged in.
+ * It is recommended that you implement an edit button 
+ * in your templates to make it easy to switch to and
+ * from the admin control panel when editing pages. 
+ *
+ */
+#editpage {
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	right: 0; 
+	padding: 5px 6px; 
+	background: #db1174; 
+	color: #fff; 
+	display: block;
+	font-weight: bold; 
+}
+	#editpage:hover {
+		background: #ffffcc;
+		color: #000; 
+	}
+
+
+/**
+ * Alignment styles that are used by the InputfieldTinyMCE for 
+ * positioning images in bodycopy. If you are using this field type, 
+ * you may want to include these or similar styles in your site.
+ *
+ */
+.align_left {
+        float: left;
+        margin: 0 1em 0.25em 0;
+}
+
+.align_right {
+        float: right;
+        margin: 0 0 0.25em 1em;
+}
+
+.align_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+
+/**
+ * WireFatalError is a class that ProcessWire will use to output
+ * fatal errors in the design, but only if debug mode is on, or if
+ * you are logged in as a superuser. 
+ *
+ */
+
+.WireFatalError {
+	background: #a30000; 
+	color: #fff; 
+	padding: 1em; 
+	position: relative;
+	z-index: 9999;
+}
+
