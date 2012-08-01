@@ -241,10 +241,11 @@ function renderRSS(PageArray $items, $title = '', $description = '') {
  * @param string $headline Headline to display above nav
  * @param array|PageArray $items May be an array of Page objects or array of ($url => $label)
  * @param Page|string $currentURL Current item that should be highlighted, may be Page or $url
+ * @param bool $mobileSelect Replace the nav with a <select> when at mobile width?
  * @return string
  *
  */
-function renderNav($headline, $items, $currentURL = '') {
+function renderNav($headline, $items, $currentURL = '', $mobile = true) {
 
 	if(!count($items)) return '';
 
@@ -277,6 +278,7 @@ function renderNav($headline, $items, $currentURL = '') {
 	$t->set('items', $nav); 
 	$t->set('currentURL', $currentURL); 
 	$t->set('headline', $headline); 
+	$t->set('mobile', $mobile); 
 
 	return $t->render();
 }

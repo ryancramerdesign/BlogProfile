@@ -242,6 +242,10 @@ a:hover {
 	color: #000;
 }
 
+.post-byline .edit a {
+	text-decoration: underline;
+}
+
 .comments a,
 .post-byline a,
 .post-foot a,

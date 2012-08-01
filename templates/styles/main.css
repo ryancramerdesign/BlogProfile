@@ -1,6 +1,6 @@
 @import url(comments.css);	/* comments styling */
 @import url(icons.css);		/* icon definitions */
-@import url(vborders.css); 	/* vertical borders (remove if you don't want vertical borders) */
+@import url(vborders.css);	/* vertical borders (remove if you don't want vertical borders) */
 @import url(pw.css); 		/* styling of ProcessWire markup elements */
 
 /***********************************************************************
@@ -103,24 +103,29 @@ body {
 		margin: 0.25em 0 0 0;
 	}
 
-	#site-search-form {
-		padding-right: 10px;
-		padding-bottom: 5px;
+	#site-search {
+		position: absolute; 
+		right: 0;
+		bottom: 0;
 	}
+		#site-search-form {
+			padding-right: 10px;
+			padding-bottom: 5px;
+		}
 
-	#site-search-form input[type=search],
-	#site-search-form input[type=text] {
-		float: left; 
-		width: 100%;
-		margin: 0;
-	}
-	#site-search-form input[type=submit],
-	#site-search-form form button {
-		display: none; 
-		float: left; 
-		width: 25%; 
-		margin: 0;
-	}
+		#site-search-form input[type=search],
+		#site-search-form input[type=text] {
+			float: left; 
+			width: 100%;
+			margin: 0;
+		}
+		#site-search-form input[type=submit],
+		#site-search-form form button {
+			display: none; 
+			float: left; 
+			width: 25%; 
+			margin: 0;
+		}
 
 /***********************************************************************
  * Content - contains nav, bodycopy and sidebar
@@ -293,6 +298,7 @@ body {
 				padding-left: 0;
 			}
 				#bodycopy .post-body h3 {
+					/* remove the h3 background when displayed in a post, and make it a little bigger */
 					background: none; 
 					border: none; 
 					padding-top: 0;
@@ -515,9 +521,30 @@ body {
 			width: 100%; 
 		}
 
+	form.mobile {
+		margin-top: 1em;
+	}
+
+	#site-search {
+		position: static; 
+	}
+
+	#site-search-form {
+		padding: 10px;
+		padding-right: 20px;
+	}
+		#site-search-form input {
+			width: 100%;
+		}
+
+	#content #bodycopy h3 {
+		margin-left: 0;
+		padding-left: 12px;
+	}
+
 	#content,
 	#content #bodycopy,
-	#content #bodycopy h3,
+	#content #bodycopy .post-body h3,
 	#content #bodycopy .post,
 	#content #bodycopy .post-foot,
 	#content .MarkupPagerNav,
@@ -542,10 +569,6 @@ body {
 		background: none; 	
 	}
 
-	#content #bodycopy h3 {
-		padding-left: 15px; 
-		margin-left: 0;
-	}
 	#processwire, 
 	#footer_note {
 		float: none; 
@@ -553,10 +576,3 @@ body {
 	}
 }
 
-@media only screen and (min-width: 767px) {
-	#site-search {
-		position: absolute; 
-		right: 0;
-		bottom: 0;
-	}
-}

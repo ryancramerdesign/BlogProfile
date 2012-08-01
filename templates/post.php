@@ -29,8 +29,8 @@ $year = date('Y', $date);
 $month = date('n', $date); 
 
 // if there are categories and/or tags, then make a separate nav for them
-if(count($page->categories)) $subnav .= renderNav(__('Categories'), $page->categories); 
-if(count($page->tags)) $subnav .= renderNav(__('Tags'), $page->tags); 
+if(count($page->categories)) $subnav .= renderNav(__('Related Categories'), $page->categories); 
+if(count($page->tags)) $subnav .= renderNav(__('Related Tags'), $page->tags); 
 
 // subnav contains authors, archives and categories links
 $subnavItems = array(
@@ -38,7 +38,7 @@ $subnavItems = array(
 	"{$config->urls->root}archives/$year/$month/" => strftime('%B %Y', $date)
 	);
 
-$subnav .= renderNav(__('See also'), $subnavItems); 
+$subnav .= renderNav(__('See Also'), $subnavItems); 
 
 include("./main.inc"); 
 
