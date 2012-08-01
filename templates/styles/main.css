@@ -232,6 +232,11 @@ body {
 				top: -50px;
 				right: 10px;
 			}
+				.num-posts a.rss {
+					position: relative;
+					top: 3px; 	
+					margin-left: 3px; 
+				}
 
 		#bodycopy h4 {
 			margin-bottom: 0.75em;

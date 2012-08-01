@@ -16,7 +16,10 @@ if(count($categories)): ?>
 			<h3><a href='<?php echo $category->url; ?>'><?php echo $category->title; ?></a></h3>	
 
 			<?php $n = $category->posts->getTotal(); ?>
-			<span class='num-posts'><?php echo sprintf(_n('%d post', '%d posts', $n), $n); ?></span>
+			<span class='num-posts'>
+				<?php echo sprintf(_n('%d post', '%d posts', $n), $n); ?>
+				<a class='rss' href='<?php echo $category->url; ?>rss'>RSS</a>
+			</span>
 
 
 			<?php if($n): ?>

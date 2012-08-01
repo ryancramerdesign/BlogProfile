@@ -36,9 +36,10 @@ a.more,
 
 #sidebar a.rss {
 	position: absolute;
-	top: 12px;
+	top: 8px;
 	right: 0;
 }
+
 
 #content h5 {
 	font-weight: bold;	
