@@ -19,6 +19,8 @@
 	<p class='comment-head CommentHeader'><?php
 
 		$cite = htmlentities($comment->cite, ENT_QUOTES, "UTF-8"); 
+		$website = htmlentities($comment->website, ENT_QUOTES, "UTF-8");
+		if($website) $cite = "<a href='$website' rel='nofollow' target='_blank'>$cite</a>";
 
 		if($page->template == 'post') {
 			echo sprintf(__('Comment by %1$s on %2$s'), $cite, $comment->date); 

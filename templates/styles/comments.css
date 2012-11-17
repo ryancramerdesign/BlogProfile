@@ -64,22 +64,16 @@
 		margin: 0.5em 0;
 	}
 
-	.CommentForm_cite,
-	.CommentForm_email {
-		width: 49%; 
-		float: left; 
+	.CommentForm_cite input,
+	.CommentForm_email input,
+	.CommentForm_website input,
+	.CommentForm_text textarea {
+		width: 97%; 
+		padding: 1%;
+		margin-top: 0;
+		font-size: 13px; 
 	}
-		.CommentForm_cite {
-			padding-right: 2%; 
-		}
-		.CommentForm_cite input,
-		.CommentForm_email input,
-		.CommentForm_text textarea {
-			width: 96%; 
-			padding: 2%;
-			margin-top: 0;
-			font-size: 13px; 
-		}
+
 
 	.CommentForm_text {
 		clear: left; 
@@ -91,6 +85,7 @@
 
 	.CommentForm_cite input,
 	.CommentForm_email input,
+	.CommentForm_website input,
 	.CommentForm_text textarea {
 		border: 1px solid #ccc; 
 	}

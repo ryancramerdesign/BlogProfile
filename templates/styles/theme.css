@@ -141,6 +141,7 @@ ul.links li {
 #CommentForm,
 .CommentForm_cite input,
 .CommentForm_email input,
+.CommentForm_website input,
 .CommentForm_text textarea { 
 	/* slightly darker horizontal border color than the light border color */
 	border-color: #b5c9d0; 
