@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS `caches`;
+CREATE TABLE `caches` (
+  `name` varchar(255) NOT NULL,
+  `data` mediumtext NOT NULL,
+  `expires` datetime NOT NULL,
+  PRIMARY KEY (`name`),
+  KEY `expires` (`expires`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `field_body`;
 CREATE TABLE `field_body` (
